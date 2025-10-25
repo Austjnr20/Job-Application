@@ -1,7 +1,0 @@
-{
-  "name": "job-form",
-  "version": "1.0.0",
-  "description": "Static job application form with serverless API (Vercel)",
-  "scripts": {},
-  "dependencies": {}
-}
