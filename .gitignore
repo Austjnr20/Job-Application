@@ -1,2 +1,4 @@
 node_modules/
+# keep the runtime tmp storage out of git if created during local testing
 submissions.json
+tmp-submissions.json
