@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Application Form</title>
+</head>
+<body>
+    <div id="form">
+        <h1>Job Application Form</h1>
+    <form method="POST" action="/submit">
+            <section id="part1">
+                <label for="name">First Name:</label>
+                <input type="text" id="name" name="name" placeholder="Input your First Name" required>
+                <label for="surname">Second Name:</label>
+                <input type="text" id="surname" name="surname" placeholder="Input your Second Name" required>
+            </section>
+            <section id="part2">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Type in your Email" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Input your Number" required>
+            </section>
+            <section id="part3">
+                <label for="postion">Position Being Applied For:</label> 
+                <input type="text" id="position" name="position" placeholder="Input your position" required>
+                <label for="experience">Years of Experience:</label>
+                <input type="number" id="experience" name="experience" placeholder="Input your Experience" required>
+            </section>
+            <section id="part4">
+                <label for="education">Highest Level of Education:</label>
+                <input type="text" id="education" name="education" placeholder="Type in your current Education Level" required>
+                <label for="skills">Relevant Skills:</label>
+                <input type="text" id="skills" name="skills" placeholder="Input your Relevant Skills" required>
+            </section>
+            <section id="part5">
+                <label for="cover">Cover Area:</label>
+                <textarea id="cover" name="cover" placeholder="Type in your Cover Area" required>
+                </textarea>
+            </section>
+            <section id="part6">
+                <button type="submit" id="submit">Submit Application</button>
+            </section>
+        </form>
+    </div>
+</body>
+</html>
