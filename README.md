@@ -83,23 +83,36 @@ Recommended production options for persistence:
 - Use an external database: Supabase, Firebase, PlanetScale, MongoDB Atlas, etc.
 - Push submissions to a Google Sheet / Airtable / external API if you prefer no-database solutions.
 
-Deploying to Vercel
+Deploying a full Express backend
 
-1. If you haven't, install the Vercel CLI (optional) or use the Vercel web dashboard.
+This project now includes a small Express server and a SQLite database for persistence. Deploy this to any host that supports Node apps (Heroku, Render, Railway, Fly, DigitalOcean App Platform, etc.). Vercel can still host the static frontend, but if you want to host the backend as well on a single provider, consider one of the platforms above.
+
+How to run locally (PowerShell):
+
+1. Install Node dependencies:
 
 ```powershell
-npm i -g vercel
-vercel login
-vercel --prod
+npm install
+npm run prepare-db
 ```
 
-2. The project will be deployed as a static site with serverless `api/*` routes automatically.
+2. Start the server:
 
-Testing locally
+```powershell
+npm start
+```
 
-- You can test the `api/` endpoints locally with the Vercel CLI (`vercel dev`) or by using a local Node server that emulates the API (note: local `/tmp` behavior differs from Vercel).
+3. Open the site:
 
-If you'd like, I can wire the endpoints to a real persistent store (Supabase or Vercel KV) and update `api/submit.js` accordingly — tell me which provider you prefer and I'll implement it and update the README with any credentials/setup steps to follow.
+```text
+http://localhost:3000
+```
+
+Testing and deployment notes
+
+- The local SQLite DB is created at `data/submissions.db`.
+- If you prefer serverless deployment (Vercel), I can instead wire up the API routes to a managed DB (Supabase, Vercel KV, etc.) so you keep everything serverless.
+- Tell me which hosting provider you'd like and I can produce deployment steps for that provider.
 
 ## Next steps (optional)
 

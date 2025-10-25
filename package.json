@@ -1,0 +1,19 @@
+{
+  "name": "job-form",
+  "version": "1.0.0",
+  "description": "Job application form with Express + SQLite backend",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "prepare-db": "node server/db-init.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^8.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
