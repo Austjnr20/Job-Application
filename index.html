@@ -44,5 +44,16 @@
             </section>
         </form>
     </div>
+    <!--Implement JavaScript code for a working System-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                alert('Application Submitted Successfully!');
+                form.reset(); // Reset the form fields
+            });
+        });
+    </script>
 </body>
 </html>
